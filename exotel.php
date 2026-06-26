@@ -7,6 +7,9 @@ namespace aw2\exotel;
 
 function call($atts,$content=null,$shortcode){
 	if(\aw2_library::pre_actions('all',$atts,$content,$shortcode)==false)return;
+	
+	$response = '';
+	
 	extract(\aw2_library::shortcode_atts( array(
 		'from'  	  => "",
 		'to'		  => ""
