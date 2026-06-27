@@ -5,7 +5,7 @@ namespace aw2\exotel;
 
 \aw2_library::add_service('exotel.agent_customer_call','Call Number',['func'=>'call','namespace'=>__NAMESPACE__]);
 
-function call($atts,$content=null,$shortcode){
+function call($atts,$content=null,$shortcode=null){
 	if(\aw2_library::pre_actions('all',$atts,$content,$shortcode)==false)return;
 	
 	$response = '';
@@ -55,7 +55,7 @@ function call($atts,$content=null,$shortcode){
 
 \aw2_library::add_service('exotel.get','Get communication details',['namespace'=>__NAMESPACE__]);
 
-function get($atts,$content=null,$shortcode){
+function get($atts,$content=null,$shortcode=null){
 	if(\aw2_library::pre_actions('all',$atts,$content,$shortcode)==false)return;
 	extract(\aw2_library::shortcode_atts( array(
 			'sid'    =>""
